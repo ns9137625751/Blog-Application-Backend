@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "4ba5d11c-8789-4b17-b6e9-93f3dc1961e8",
+		"name": "Blog Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Create a User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\":\"Nishant patel\",\r\n  \"email\":\"nishantp@gmail.com\",\r\n  \"phonenumber\":\"1234567894\",\r\n  \"password\":\"iamnishant\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:5000/api/auth/createuserblog",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"createuserblog"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Users",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\":\"nishantp@gmail.com\",\r\n  \"password\":\"iamnishant\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:5000/api/auth/loginblog",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"loginblog"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users Details",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/api/auth/getuser",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"getuser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Particular User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Blog",
+			"item": [
+				{
+					"name": "Create a New Blog",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjYzczOTRiMzExYjlhZDMwNTQxYmRkIn0sImlhdCI6MTY5MTEyMDY0NH0.lhQUT33PlpAio3QbwOoYN6irMKwyyQCbIhPymb_E6tM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\":\"this is title 5\",\r\n  \"description\":\"this is description 5\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:5000/api/blogs/addblog",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"blogs",
+								"addblog"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Particular Blog",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjYzczOTRiMzExYjlhZDMwNTQxYmRkIn0sImlhdCI6MTY5MTEyMDY0NH0.lhQUT33PlpAio3QbwOoYN6irMKwyyQCbIhPymb_E6tM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/api/blogs/fetchblogs",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"blogs",
+								"fetchblogs"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch All Blogs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/api/blogs/fetchallblogs",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"blogs",
+								"fetchallblogs"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
