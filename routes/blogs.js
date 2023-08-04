@@ -4,10 +4,8 @@ const Blog = require("../models/Blog");
 var fetchuser = require('../middleware/fetchuser.js');
 const { body, validationResult } = require('express-validator');
 
-
-
 // add a new blog using POST 
-router.post('/addblog', fetchuser, [
+router.post('/add-blog', fetchuser, [
     body('title', "Enter a valid title").isLength({ min: 3 }),
     body('description', 'Enter a valid description').isLength({ min: 5 }),
 ], async (req, res) => {
@@ -31,7 +29,7 @@ router.post('/addblog', fetchuser, [
 
 
 // get all particular blogs GET  
-router.get('/fetchblogs', fetchuser, async (req, res) => {
+router.get('/my-blog', fetchuser, async (req, res) => {
     try {
         const blogs = await Blog.find({ user: req.user.id });
         res.json(blogs)
@@ -43,7 +41,7 @@ router.get('/fetchblogs', fetchuser, async (req, res) => {
 
 
 // get all particular blogs GET  
-router.get('/fetchallblogs', async (req, res) => {
+router.get('/all-blogs', async (req, res) => {
     try {
         const blogs = await Blog.find();
         res.json(blogs)

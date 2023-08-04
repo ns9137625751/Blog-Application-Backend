@@ -13,6 +13,7 @@ app.use(express.json())
 
 app.use('/api/auth',require('./routes/auth'))
 app.use('/api/blogs',require('./routes/blogs'))
+app.use('/api/profile',require('./routes/profile'))
 
 app.get('/', (req, res) => {
   res.send('Hello World!')

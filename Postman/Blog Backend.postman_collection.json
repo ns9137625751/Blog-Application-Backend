@@ -24,7 +24,7 @@
 							"raw": "{\r\n  \"name\":\"Nishant patel\",\r\n  \"email\":\"nishantp@gmail.com\",\r\n  \"phonenumber\":\"1234567894\",\r\n  \"password\":\"iamnishant\"\r\n}"
 						},
 						"url": {
-							"raw": "localhost:5000/api/auth/createuserblog",
+							"raw": "localhost:5000/api/auth/signup",
 							"host": [
 								"localhost"
 							],
@@ -32,7 +32,7 @@
 							"path": [
 								"api",
 								"auth",
-								"createuserblog"
+								"signup"
 							]
 						}
 					},
@@ -69,13 +69,44 @@
 					"response": []
 				},
 				{
-					"name": "Get All Users Details",
+					"name": "All Profile",
 					"request": {
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
 								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/api/auth/getalluser",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"getalluser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRjYzczOTRiMzExYjlhZDMwNTQxYmRkIn0sImlhdCI6MTY5MTEyMjY1MX0.VhdDEH0Rgc45l45M4iMXvUg0jH4-I3X_jF_UGme_Dk4",
 								"type": "text"
 							}
 						],
@@ -90,17 +121,6 @@
 								"auth",
 								"getuser"
 							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get Particular User",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": ""
 						}
 					},
 					"response": []
@@ -147,7 +167,7 @@
 					"response": []
 				},
 				{
-					"name": "Fetch Particular Blog",
+					"name": "My Blog",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -185,7 +205,7 @@
 					"response": []
 				},
 				{
-					"name": "Fetch All Blogs",
+					"name": "All Blog",
 					"request": {
 						"method": "GET",
 						"header": [
