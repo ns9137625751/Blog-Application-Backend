@@ -1,0 +1,57 @@
+[{
+  "_id": {
+    "$oid": "64cc6e7a767c1252c2cc5102"
+  },
+  "name": "Nishant patel",
+  "email": "nishantpatel@gmail.com",
+  "phonenumber": 1234567892,
+  "password": "$2a$10$lQps6RrL2MwaEYyxdlbA3O.9ruUIEnifKpk2rQu.fLsO8osW8UVS.",
+  "date": {
+    "$date": {
+      "$numberLong": "1691119226677"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64cc7062b311b9ad30541bd5"
+  },
+  "name": "Nishant patel",
+  "email": "nishant@gmail.com",
+  "phonenumber": 1234567893,
+  "password": "$2a$10$1pyJi/Mv1e1Puo7FiwRtuuWNqkeBC/p5Tr4lhkAU1mTngZ35h1Ps6",
+  "date": {
+    "$date": {
+      "$numberLong": "1691119714314"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64cc7394b311b9ad30541bdd"
+  },
+  "name": "Nishant patel",
+  "email": "nishantp@gmail.com",
+  "phonenumber": 1234567894,
+  "password": "$2a$10$KEMPbYWctBoQXDP3WwDahe4H53GwLZ7u4uX6oWnxwcN9L0Ok58w.O",
+  "date": {
+    "$date": {
+      "$numberLong": "1691120532907"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64cc8ea095f3126ef0878138"
+  },
+  "name": "Nishant shekhada",
+  "email": "nishantshekhada@gmail.com",
+  "phonenumber": 1234567895,
+  "password": "$2a$10$kSHtWSRvlXKagtAYjiM6OOa6rhciEqLHVGT.54gLrWOcSeR8ovTlS",
+  "date": {
+    "$date": {
+      "$numberLong": "1691127456683"
+    }
+  },
+  "__v": 0
+}]
